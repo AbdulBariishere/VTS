@@ -1,0 +1,35 @@
+table.tblside {
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+  }
+  td.tdstyle {
+    font-size: 9pt;
+    font-weight: 400;
+  }
+  /*.clearfix {
+    height: 100%;
+  }*/
+  .clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #main {
+    background-color: white;
+    height: 40%;
+    overflow: scroll;
+    width: 100%;
+    padding-left: 15px;
+    overflow-x: hidden;
+    z-index: 1111 !important;
+    position: absolute;
+    bottom: 0px;
+  }
+  .scroll-pane {
+    width: 128%;
+    height: auto;
+    overflow: auto;
+  }
+  .scroll-pane p {
+    margin: 0px 0;
+  }

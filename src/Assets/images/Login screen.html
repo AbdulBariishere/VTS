@@ -1,0 +1,487 @@
+
+<!-- saved from url=(0046)http://13.234.72.202/jsp/tracknovate_login.jsp -->
+<html class="gr__13_234_72_202" style="width: 100%; height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!--<link rel="stylesheet" type="text/css" href="../Themes/Gray Theme/css/main.css">-->
+<title>Login screen</title>
+
+
+
+
+     <!-- Create connection with database. -->
+ <!-- Open database connection. -->
+
+
+
+<script type="text/javascript" src="./Login screen_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./Login screen_files/jquery.fullscreenBackground.js.download"></script>
+<style type="text/css">
+
+#layer05_holder {
+	position:absolute;
+	bottom:5px;
+	right:5px;
+	width:563px;
+	height:auto;
+	margin:auto;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: right;
+	padding-left: 125px;
+
+}
+
+
+#errormsg
+{
+	position:absolute;
+	top:415px;
+	right:270px;
+	border: 0px solid #d2d0b5;
+}
+
+#fgpwd_main{
+	border: 2px solid gray;
+    position: relative;
+    display: none;
+    /* top: 42%; */
+    /* left: 35%; */
+    background: #E1E1E1;
+    /* background-color: #FFFFEE; */
+    height: 140px;
+    width: 400px;
+    z-index: 14;
+    /*border-radius: 93px;*/
+    margin: 17% auto;
+}
+
+.emailstatus{
+	position:absolute;
+	bottom:1%;
+	right:3%;
+	z-index:100;
+	font-weight:bold;
+	width: 200px;
+	margin: 0 auto 20px auto;
+	padding: 10px 10px;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.6);
+	opacity: 0;
+
+	filter: alpha(opacity=0);
+	cursor: default;
+	/*display: none;*/
+	background: #ffff91;
+	border: 1px solid #f6db7b;
+	-webkit-animation: fadeOut 7s linear forwards;
+	-moz-animation: fadeOut 7s linear forwards;
+	-o-animation: fadeOut 7s linear forwards;
+	-ms-animation: fadeOut 7s linear forwards;
+	animation: fadeOut 7s linear forwards;
+}
+
+
+@-webkit-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -webkit-transform: translateY(0px);}
+	99% { opacity: 0; -webkit-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -moz-transform: translateY(0px);}
+	99% { opacity: 0; -moz-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -o-transform: translateY(0px);}
+	99% { opacity: 0; -o-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@-ms-keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -ms-transform: translateY(0px);}
+	99% { opacity: 0; -ms-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; transform: translateY(0px);}
+	99% { opacity: 0; transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+body{
+	padding: 0;
+    text-align: center;
+    border: none;
+    background: #eee url("../images/logo/tracknovate_bg.png") repeat-x left -938px !important;
+    font-family:helvetica, arial, sans-serif; /*font-weight:lighter;*/overflow: hidden;}
+#login-form {
+  height: 360px;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  z-index: 11;
+  text-align: center;
+  display: table;
+}
+#logo{ /*height:360px; width:140px; float:left;*/  /*border-right:1px solid #D9D9D9;box-shadow:1px 0px 0px 0px #FFFFFF;*/}
+#hetitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: xx-large;
+    padding: 20px 14px 20px 0px;
+    color: #01A63E;
+}
+#form {
+	display: table-cell;
+    /* height: 360px; */
+    /* margin: 0 auto; */
+    width: 55%;
+    vertical-align: middle;
+}
+.form_wrapper{
+	float: left;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin: 0 auto;
+	width: 333px;
+	font-size: 14px;
+	-moz-box-shadow: 1px 1px 7px #ccc;
+	-webkit-box-shadow: 1px 1px 7px #ccc;
+    box-shadow: 1px 1px 7px #ccc;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+    border-radius: 8px;
+}
+/*.button {
+  border: 0 solid #4d90fe;
+  height: 60px;
+  width: 60px;
+  background: url("../images/go_btn/go-04.png") no-repeat scroll 0 0;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+}*/
+.button {
+    background-color: #004d80;
+    color: #FFF;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #e6f5ff;
+    margin-top: 5px;
+}
+.button:hover {
+    background-color: #005c99;
+    color: #FFF;
+}
+/*.button:active {
+	position:relative;
+	top:1px;
+}*/
+
+#fgtpwd {
+  /*color: white;*/
+  cursor: pointer;
+  /*text-align: center;*/
+  height: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#fgtpwd:hover{
+	text-decoration:none;
+	color:lightgray;
+}
+.corners {
+    width: 100% !important;
+    height: 32px !important;
+    border: 1px solid #b3b3b3;
+    border-radius: 5px;
+	font-size: 13px;
+	padding: 10px;
+	width: 200px;
+    font-family: helvetica, arial, sans-serif;
+}
+.corners:focus {
+    border: 1px solid #4db8ff;
+}
+.corners:hover {
+  /*background: rgba(0, 0, 0, 0) url("../images/logo/text-field-bg.png") repeat scroll 0 0;*/
+}
+*:focus {
+    outline: none;
+}
+// Change the white to any color ;)
+input:-webkit-autofill {
+    /*-webkit-box-shadow: 0 0 0px 1000px transparent inset;*/
+    background-color: red !important;
+}
+.company_info{
+	position:absolute;bottom: 8%;height: 50px;width:100%;display:block;/*color:#fff;font-size: 20px;*/z-index: 10; font-weight: normal;text-align:center;;
+}
+</style>
+
+<script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+        var f = document.querySelectorAll("form")[0]; // eslint-disable-line no-undef
+        if (!f._avast_submit) {
+          f._avast_submit = f.submit;
+        }
+        try {
+          Object.defineProperty(f, "submit", {
+            get: function get() {
+              return function (prev_submit) {
+                prev_submit.call(this);
+
+                if (this._avast_inside_submit) {
+                  return;
+                }
+                this._avast_inside_submit = true;
+
+                var evt = document.createEvent("CustomEvent");
+                evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+                this.dispatchEvent(evt);
+
+                delete this._avast_inside_submit;
+              }.bind(this, this._avast_submit);
+            },
+            set: function set(submitFunc) {
+              this._avast_submit = submitFunc;
+            }
+          });
+        } catch (ex) {
+          // ignored
+        }
+      })();</script><style name="AVAST_PAM_iconstyle">#username::-webkit-credentials-auto-fill-button { display: block; position: relative; right: 32px; }#username::-webkit-caps-lock-indicator { display: block; position: relative; right: 32px; }</style></head><body onload="document.login.username.focus();" topmargin="0" leftmargin="0" scroll="no" data-gr-c-s-loaded="true" style="width: 100%; height: 100%;">
+
+<form name="login" method="post" action="http://13.234.72.202/jsp/UserLogin.jsp" class="AVAST_PAM_loginform">
+<div id="errormsg">
+	
+</div>
+<div id="background-image" style="display: block; height: 100%; width: 100%; overflow: hidden; position: fixed; top: 0px; left: 0px; z-index: 1;">
+	<!--<div id="modalBlackout" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0.50);z-index: 10;z-index: 10;position: absolute;width: 100%;height: 100%;"></div>-->
+	<img id="bg-img" width="2800" height="1600" style="height: 780.571px; width: 1366px; margin-left: 0px; margin-top: -86.2857px; display: block;"><!--src="../images/logo/tracknovate_bg.jpg"-->
+
+</div>
+<div id="login-form">
+		<div id="logo" style="width: 45%;position: fixed;top: 200px;z-index: 11;display: table-cell;vertical-align: middle;text-align: right;"><!--.......logo end.........-->
+				
+					<img src="./Login screen_files/tracknovate_logo.png" style="margin: 0px auto; display: inline;padding-right: 4%;width: 300px;">
+				
+				<!--<div id="hetitle">Allsemi Solutions</div>-->
+		</div>
+		<div id="form">
+			<table width="100%" style="padding: 40px;" class="form_wrapper">
+				<tbody><tr>
+					<td height="45" valign="top" style="font-size:17px;font-weight:bold;text-align:center;">
+						Sign in to GPS System
+					</td>
+				</tr>
+				<tr>
+					<td height="45">
+						<!--<label><font style="font-size:20px;color:#3e3e3e;" >Username</font><br>-->
+						<input class="corners" placeholder="Username" type="text" name="username" id="username" onkeypress="return IsAlphaNumeric(event);" ondrop="return false;" onpaste="return false;" size="26" maxlength="50" maxheight="70" tabindex="1" value="">
+						<!---->
+					</td>
+				</tr>
+				<tr>
+					<td height="45">
+						<!--<label><font style="font-size:20px;color:#3e3e3e;" >Password</font><br>-->
+						<input class="corners" placeholder="Password" type="password" name="password" size="26" maxlength="50" tabindex="2" value="">
+						<!---->
+					</td>
+				</tr>
+				<tr>
+					<td height="40">
+						<input type="submit" name="button1" id="button1" title="Go" class="button" valign="middle" value="Log In" onclick="return validate();">
+						<input type="submit" name="button2" id="button2" class="button" value="Reset" valign="middle" onclick="return resetFields();"><!---->
+						<!--<input  type="submit"   class="button" value="Log in"> &nbsp;&nbsp;
+						<input  type="submit"  class="button" value="Reset" >-->
+					</td>
+				</tr>
+				<tr>
+					<td><div style="border:0px solid black;position:static;left:40px;top:20px;color:red;" id="loginerror"></div></td>
+				</tr>
+				<tr>
+					<td><div id="fgtpwd" onclick="javascript:openPopup();">Forgot Password ?</div></td>
+				</tr>
+			</tbody></table>
+		</div>
+ 	 <!--</div>-->
+</div>
+<!--<div class="company_info" style="" valign='middle'>
+	<span style="cursor:pointer;">Call for Sales enquiries: +91 8285341784, +91 9643713989</span> |
+	<span style="cursor:pointer;">sales@dapenterprises.co.in</span><br>
+	<span style="cursor:pointer;">For Complaints: +91 9266661265, +91 9136740526</span> |
+	<span style="cursor:pointer;">support@dapenterprises.co.in</span><br>
+
+</div>-->
+<!--<div class="company_info" style="text-align:left; left:50px" valign='middle'>
+	Track Point
+</div>-->
+<!--<div class="company_info" style="text-align:right; right:50px" valign='middle'>
+	Track Point
+</div>-->
+<div style="position:absolute;top:0px;height:100%;width:100%;background-color:black;display:none;opacity:0.5;filter:alpha(opacity=50);display:none;color:white;text-align:center;font-size:40" valign="middle">
+	Software upgrade in process, please wait up till 11 AM
+</div>
+<div style="color:#6d9c09;width:100%;position: absolute; display:none;bottom:5%;border:0px solid black;text-align:center;z-index:2;">We have updated our software on 24-11-2015, so please clear your browser history.
+									<br>( If already cleared then do not consider above message. )</div>
+<div style="color:black;width:100%;position: absolute; bottom:4%;border:0px solid black;text-align:right;right:30px">
+	<button type="button" class="button" style="position:absolute;right:0;    z-index: 999;cursor: pointer;bottom: 0px;" onclick="javascript:onlinePayment();">Online Payment</button>
+</div>
+ <!-- Close database connection. -->
+<input type="hidden" name="projectName" value="VTS">
+<input type="hidden" name="projectentity" value="EMC">
+<input type="hidden" name="webclient" value="false">
+</form>
+<!--<div align='center' style="position:absolute;bottom:10px;right:10px;"><font color='#FFFFFF'>Browser Supported: Internet Explorer 8.0 and above, Mozilla Firefox 19.0.2 and above, Goolgle Chrome</font></td></tr></div>
+<div id="layer05_holder">
+  Copyright© 2013, Uffizio India Software Consultants
+</div>-->
+<div id="fgpwd_parent" style="position:absolute;top:0px;height:100%;width:100%;background-color:black;display:none;opacity:0.5;filter:alpha(opacity=50);z-index:12;"></div>
+<form action="http://13.234.72.202/jsp/ForgetPassword.jsp" name="forgerSubmit" method="post">
+	<div id="fgpwd_main" align="center">
+		<div id="invalid" style="position:absolute;color:red;top2px;left:40%;"></div>
+		<img style="height:25px;width:25px;position:absolute;right: 56px;top: 17px;cursor:pointer;" src="./Login screen_files/close_popup.png" onclick="javascript:closePopup();">
+		<div style="margin-top:15px;margin-bottom:15px;font-family: &#39;Lucida Grande&#39;, &#39;Lucida Sans Unicode&#39;, sans-serif;font-size:16px;"><font>Enter your Username below</font></div>
+		<input style="padding-left: 10px;margin-bottom:15px;font-size:16px;border:solid 1px #d2d0b5;height:33px;width:250px;" type="text" name="fgpwd_name" id="fgpwd_name"><br>
+		<input style="" type="button" id="okButton1" class="button" valign="middle" value="OK" onclick="javascript:checkUser();">
+	</div>
+</form>
+
+
+
+<script language="javascript">
+	$("#background-image").fullscreenBackground({
+		selector: "#bg-img",
+		fillOnResize: true,
+		defaultCss: true
+	});
+var specialKeys = new Array();"34,39,38,60,62,92,35,47,63,59";
+	specialKeys.push(34);//double speech
+	specialKeys.push(39);//single speech
+	specialKeys.push(38);//ampersion
+	specialKeys.push(60);//less than
+	specialKeys.push(62);//greater than
+	specialKeys.push(92);//Backslash
+	specialKeys.push(35);//Hash
+	specialKeys.push(47);//Common Slash
+	specialKeys.push(63);//Question Mark
+	specialKeys.push(59);//Semicolon
+	function IsAlphaNumeric(e) {
+
+		var keyCode = e.charCode;
+		var ret = true;
+		//alert(keyCode)
+		for(v in specialKeys){
+			if(specialKeys[v]==keyCode){
+				ret = false;
+				break;
+			}
+		}
+		if(ret==false)
+			alert(top.frames['divframe'].frames['windowframe'].jsHT.get("SpecialCharacters"));
+			//alert("Special Characters Not Allowed!")
+		return ret;
+	}
+	function mouseOve(sObj)
+	{
+		//alert(sObj.id)
+		//alert(sObj.src);
+		//document.getElementById("login_button").src = "../images/login_button_reset_99x30.png";
+		if(sObj.id == "login_button")
+			sObj.src = "../images/login_button_login_press_99x30.png";
+		else if(sObj.id == "login_button_reset")
+			sObj.src = "../images/login_button_reset_press_99x30.png";
+	}
+	function mouseOut(sObj)
+	{
+		if(sObj.id == "login_button")
+			sObj.src = "../images/login_button_99x30.png";
+		else if(sObj.id == "login_button_reset")
+				sObj.src = "../images/login_button_reset_99x30.png";
+	}
+	function validate()
+	{
+		document.login.projectName.value ="VTS";
+
+		if(document.login.username.value == "")
+		{
+			alert(top.frames['divframe'].frames['windowframe'].jsHT.get("EnterUsername"));
+			//alert("Please enter username");
+			document.login.username.focus();
+			return false;
+		}
+		else if(document.login.password.value == "")
+		{
+			alert(top.frames['divframe'].frames['windowframe'].jsHT.get("EnterPassword"));
+			//alert("Please enter password");
+			document.login.password.focus();
+			return false;
+		}
+		else if(document.login.password.value == "none" || document.login.password.value == "NONE")
+		{
+			alert(top.frames['divframe'].frames['windowframe'].jsHT.get("AccessDenied"));
+			//alert("Access denied");
+			document.login.password.value = "";
+			document.login.username.value = "";
+			document.login.username.focus();
+			return false;
+		}
+
+		return true;
+	}
+	function resetFields()
+	{
+		document.login.username.value = "";
+		document.login.password.value = "";
+		document.login.username.focus();
+		return false;
+	}
+	function checkUser(){
+		obj = document.getElementById("fgpwd_name");
+		if(obj.value==""){
+			alert(top.frames['divframe'].frames['windowframe'].jsHT.get("YourUsername"));
+			//alert("Please Enter Your Username.");
+			return;
+		}
+		else if(obj.value=="none"){
+			alert(top.frames['divframe'].frames['windowframe'].jsHT.get("CorrectValue"));
+			//alert("Please Enter Correct Value.");
+			return;
+		}
+		
+		document.forgerSubmit.submit();
+	}
+	function closePopup(){
+		document.getElementById("fgpwd_parent").style.display= "none";
+		document.getElementById("fgpwd_main").style.display= "none";
+		document.getElementById("invalid").innerHTML ="";
+		if(document.getElementById("emailstatus"))
+			document.getElementById("emailstatus").style.display= "none";
+
+	}
+	function openPopup(){
+		document.getElementById("fgpwd_parent").style.display= "block";
+		document.getElementById("fgpwd_main").style.display= "block";
+		document.getElementById("invalid").innerHTML ="";
+	}
+	function onlinePayment()	//Added by Binal Shah
+	{
+		window.location.href = "../jsp/paymentLogin.jsp";
+	}
+</script>
+
+<avast-pam-icon data-avast-pam="y" class="avast-pam-login" name="_AVAST_PAM_inputicon_0" style="left: 879px; right: auto; margin: 0px; padding: 0px; border: none; outline: none; opacity: 1; z-index: auto; display: block; visibility: visible; position: absolute; width: 25px; height: 16px; min-width: 25px; transition: none 0s ease 0s; top: 223px;"><avast-pam-img class="avast-pam-login" tabindex="-1" style="left: 0px; right: auto; margin: 0px; padding: 0px; border: none; outline: none; opacity: 1; z-index: 2139999999; display: block; visibility: visible; position: relative; top: 0px; width: 25px; height: 16px; min-width: 25px; cursor: pointer; background-image: url(&quot;chrome-extension://emhginjpijfggbofeediiojmdlmlkoik/html/images/icon-input-dropdown.svg&quot;); background-repeat: no-repeat; background-position: 0px 0px; transition: none 0s ease 0s;"></avast-pam-img></avast-pam-icon><avast-pam-icon data-avast-pam="y" class="avast-pam-login" name="_AVAST_PAM_inputicon_1" style="left: 879px; right: auto; margin: 0px; padding: 0px; border: none; outline: none; opacity: 1; z-index: auto; display: block; visibility: visible; position: absolute; width: 25px; height: 16px; min-width: 25px; transition: none 0s ease 0s; top: 270px;"><avast-pam-img class="avast-pam-login" tabindex="-1" style="left: 0px; right: auto; margin: 0px; padding: 0px; border: none; outline: none; opacity: 1; z-index: 2139999999; display: block; visibility: visible; position: relative; top: 0px; width: 25px; height: 16px; min-width: 25px; cursor: pointer; background-image: url(&quot;chrome-extension://emhginjpijfggbofeediiojmdlmlkoik/html/images/icon-input-dropdown.svg&quot;); background-repeat: no-repeat; background-position: 0px 0px; transition: none 0s ease 0s;"></avast-pam-img></avast-pam-icon></body></html>
