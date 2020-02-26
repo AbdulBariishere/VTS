@@ -9,6 +9,7 @@
     "base-64": "^0.1.0",
     "bootstrap": "^4.4.1",
     "leaflet": "^1.6.0",
+    "mdbootstrap": "^4.13.0",
     "mdbreact": "^4.25.1",
     "react": "^16.12.0",
     "react-bootstrap": "^0.32.4",

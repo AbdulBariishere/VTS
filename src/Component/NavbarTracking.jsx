@@ -323,7 +323,7 @@ const NavbarTracking = props => {
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle text-white"
-              href="service.html"
+              // href="service.html"
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
@@ -334,7 +334,7 @@ const NavbarTracking = props => {
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <a className="dropdown-item" href="#">
-              <Link to="/tripsummary">Add User</Link>
+              <Link to="/adduser">Add User</Link>
              
               </a>
               <a className="dropdown-item" href="#">

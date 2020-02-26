@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "./App.css";
-
 import "leaflet/dist/leaflet.css";
 import "bootstrap/dist/css/bootstrap.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+ import 'bootstrap-css-only/css/bootstrap.min.css';
+ import 'mdbreact/dist/css/mdb.css';
 
 import {
   Route,
@@ -15,9 +17,9 @@ import * as serviceWorker from "./serviceWorker";
 import LoginContainer from "./Container/LoginContainer";
 import MapContainer from "./Container/MapContainer";
 import Tripsummary from "./Container/Tripsummary";
+import AdduserContainer from "./Container/AddUserContainer";
 import AllusersContainer from "./Container/AllusersContainer";
 import LogoutContainer from "./Container/LogoutContainer";
-
 
 const routing = (
   <Router>
@@ -26,6 +28,7 @@ const routing = (
         <Route exact path="/" component={LoginContainer} />
         <Route exact path="/tracking" component={MapContainer} />
         <Route exact path="/tripsummary" component={Tripsummary} />
+        <Route exact path="/adduser" component={AdduserContainer} />
         <Route exact path="/allusers" component={AllusersContainer} />
         <Route exact path="/logout" component={LogoutContainer} />
 
