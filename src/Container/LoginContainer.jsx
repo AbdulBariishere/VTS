@@ -21,7 +21,7 @@ export default function LoginContainer(props) {
     data.append("email", email);
     data.append("password", password);
 
-    fetch("http://localhost:81/api/session", {
+    fetch("http://localhost:8082/api/session", {
       method: "POST",
       body: data,
       headers: {
