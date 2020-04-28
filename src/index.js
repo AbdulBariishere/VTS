@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "./App.css";
+
 import "leaflet/dist/leaflet.css";
 import "bootstrap/dist/css/bootstrap.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
  import 'bootstrap-css-only/css/bootstrap.min.css';
  import 'mdbreact/dist/css/mdb.css';
  import 'mapbox-gl/dist/mapbox-gl.js';
+ 
 
 import {
   Route,
@@ -44,3 +46,6 @@ ReactDOM.render(routing, document.getElementById("root"));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.register();
+if(module.hot){
+  module.hot.accept();
+}

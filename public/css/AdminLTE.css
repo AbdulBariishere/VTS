@@ -418,8 +418,8 @@ a:focus {
  */
 .main-sidebar {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 7px;
+  left: 16px;
   padding-top: 50px;
   min-height: 100%;
   width:330px;
@@ -428,6 +428,11 @@ a:focus {
   -moz-transition: -moz-transform 0.3s ease-in-out, width 0.3s ease-in-out;
   -o-transition: -o-transform 0.3s ease-in-out, width 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+::-webkit-input-placeholder{
+  font-size: 20px;
+  padding: 5px;
+   
 }
 @media (max-width: 767px) {
   .main-sidebar {
@@ -5670,4 +5675,8 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal !important;
   }
+}
+/* curson-pointer */
+.status-code{
+  cursor: pointer;
 }

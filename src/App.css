@@ -1,6 +1,4 @@
-*{
-  padding: 0; margin: 0;
-}
+
 #map{
   height: 100vh;
 
@@ -29,7 +27,9 @@
 .App-intro {
   font-size: large;
 }
-
+.leaflet-left .leaflet-control {
+  margin-left: 100px !important;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

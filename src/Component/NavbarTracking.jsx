@@ -11,28 +11,20 @@ import {
 const NavbarTracking = props => {
   return (
     <nav
-      className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
+      className="navbar fixed-top navbar-expand-lg navbar-dark bg-color"
       style={{ fontWeight: 300, fontSize: "13pt" }}
     >
-      <a className="navbar-brand" href="index.html">
+      <a className="navbar-brand brand-color" href="#">
         Tracknovate
       </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
+      {/* <a href="#" className="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span className="sr-only">Toggle navigation</span>
+                    </a> */}
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -53,7 +45,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="reports.html"
               id="navbarDropdown"
               role="button"
@@ -85,7 +77,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -115,7 +107,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -145,7 +137,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -172,7 +164,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -202,7 +194,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -232,7 +224,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -256,7 +248,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -292,7 +284,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               href="service.html"
               id="navbarDropdown"
               role="button"
@@ -322,7 +314,7 @@ const NavbarTracking = props => {
           </li>
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle text-white"
+              className="nav-link dropdown-toggle text-black"
               // href="service.html"
               id="navbarDropdown"
               role="button"

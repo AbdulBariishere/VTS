@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import base64 from "base-64";
 
 export default class Header extends Component {
     render(){

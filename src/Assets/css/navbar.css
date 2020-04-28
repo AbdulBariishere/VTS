@@ -26,3 +26,10 @@
      }
      .navbar{ padding-top: 0px;
          padding-bottom: 0px;}
+         .bg-color{
+             background-color: #f9efbc;
+             
+         }
+         .navbar-dark .navbar-brand {
+            color: #000;
+        }
